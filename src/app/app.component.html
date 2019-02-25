@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/vitrini">
+    <i class="fas fa-home"></i>
+  </a>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/produtos">
+          <i class="fas fa-gift"></i>
+          Produtos</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/produtos/novo">
+          <i class="fas fa-plus-circle"></i>
+          Novo</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>
+
+
+<div class="container p-2">
+  <router-outlet></router-outlet>
+</div>

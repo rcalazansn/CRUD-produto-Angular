@@ -1,0 +1,28 @@
+<div class="card-columns">
+
+  <!-- <div class="card bg-primary">
+    <div class="card-body">
+      <p class="card-text">One</p>
+    </div>
+  </div>
+
+  <div class="card bg-warning">
+    <div class="card-body">
+      <p class="card-text">Two</p>
+    </div>
+  </div> -->
+
+    <div class="card" *ngFor="let produto of produtos">
+      <div class="card-body">
+        <h5 class="card-title">{{produto.descricao}}</h5>
+        <p class="card-text">{{produto.detalhes}}</p>
+        <h2>{{produto.valor | currency:'BRL' }}</h2>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Criação {{produto.inclusao | date: 'dd/MM/yyyy HH:mm:ss'}}</small>
+        <br/>
+        <small class="text-muted">Alteração {{produto.alteracao | date: 'dd/MM/yyyy HH:mm:ss'}}</small>
+      </div>
+  </div>
+
+</div>
