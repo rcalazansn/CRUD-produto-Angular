@@ -178,5 +178,14 @@ adicionar service lista
       this.produtos = resp;
     });
 
----------------------------------    
+---------------------------------   
+
+DEPLOY
+
+https://myview.rahulnivi.net/build-deploy-angular-app-azure-via-kuduscriptgithub/
+
+npm install kuduscript -g
+npm install kuduscript -g
+
+----------------------------------
 
