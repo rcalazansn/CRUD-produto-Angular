@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProdutoService {
 
-  private endpoint: string = 'https://localhost:5001/api/v1/Produto';
+  private endpoint: string = 'https://crudproduto.azurewebsites.net/api/v1/Produto';
 
   constructor(private http: HttpClient) { }
 
