@@ -31,6 +31,13 @@
           </div>
         </div>
 
+         <div class="form-row">
+          <div class="form-group col-md-2">
+            <label>Foto</label>
+            <input type="file" id="foto" (change)="onFileChange($event)" #fileInput>
+          </div>
+        </div>
+
         <button class="btn btn-success" (click)="salvar()">
           <i class="far fa-save"></i>
           Salvar</button>

@@ -6,4 +6,5 @@ export class Produto {
     valor: number;
     inclusao: Date;
     alteracao: Date;
+    foto: string | any;
 }

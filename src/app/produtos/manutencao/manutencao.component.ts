@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Produto } from '../produto';
@@ -9,6 +9,8 @@ import { ProdutoService } from '../produto.service';
   templateUrl: './manutencao.component.html'
 })
 export class ManutencaoComponent implements OnInit {
+
+  @ViewChild('fileInput') fileInput: ElementRef;
 
   public titulo: string = "Novo Produto";
   private id: number;
@@ -25,8 +27,9 @@ export class ManutencaoComponent implements OnInit {
       descricao: ['', Validators.compose([Validators.minLength(10), Validators.maxLength(100), Validators.required])],
       detalhes: ['', Validators.compose([Validators.minLength(10), Validators.maxLength(200), Validators.required])],
       valor: ['', Validators.required],
-      inclusao:[],
-      alteracao:[]
+      inclusao: [],
+      alteracao: [],
+      foto: [],
     });
   }
 
@@ -58,4 +61,14 @@ export class ManutencaoComponent implements OnInit {
     }
   }
 
+  onFileChange(event) {
+    console.log('A ', this.form.value);
+
+    if (event.target.files.length > 0) {
+      let file = event.target.files[0];
+      this.form.get('foto').setValue(file);
+    }
+
+    console.log('B ', this.form.value);
+  }
 }
